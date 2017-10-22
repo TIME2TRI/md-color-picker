@@ -15,8 +15,9 @@
 		md-color-hsl="mdColorHsl"
 		md-color-default-tab="mdColorDefaultTab"
 	></div>
-	<md-actions layout="row">
-		<md-button class="md-raised md-default" ng-click="close()" style="width: 50%;">{{'ACTIONS.ABORT'|translate}}</md-button>
-		<md-button class="md-raised md-primary" ng-click="ok()" style="width: 50%;">{{'ACTIONS.SELECT'|translate}}</md-button>
+	<md-actions layout="row" layout="space-between center" layout-padding>
+		<md-button class="md-raised md-default" ng-click="close()">{{'ACTIONS.ABORT'|translate}}</md-button>
+		<span flex></span>
+		<md-button class="md-raised md-primary" ng-click="ok()">{{'ACTIONS.SELECT'|translate}}</md-button>
 	</md-actions>
 </md-dialog>
