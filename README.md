@@ -26,6 +26,7 @@ bower install md-color-picker
 
 ## Angular dependencies
 - [Angular Material](https://material.angularjs.org)
+- Angular Translate
 - [ngCookies](https://docs.angularjs.org/api/ngCookies) (optional)
 
 ## Other dependencies
