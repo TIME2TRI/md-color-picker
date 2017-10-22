@@ -22,9 +22,9 @@
 
 	<div class="md-color-picker-tabs md-color-picker-colors">
 		<md-tabs md-stretch-tabs="always" md-align-tabs="bottom"  md-selected="whichPane" md-no-pagination>
-			<md-tab ng-if="mdColorSpectrum">
+			<md-tab ng-if="mdColorSpectrum" md-ink-ripple="#ffffff">
 				<md-tab-label>
-					<md-icon md-svg-icon="gradient.svg"></md-icon>
+					<md-icon md-svg-icon="color_lens.svg"></md-icon>
 				</md-tab-label>
 				<md-tab-body>
 					<div layout="row" layout-align="space-between" style="height: 255px">
@@ -34,7 +34,7 @@
 					</div>
 				</md-tab-body>
 			</md-tab>
-			<md-tab ng-if="mdColorSliders">
+			<md-tab ng-if="mdColorSliders" md-ink-ripple="#ffffff">
 				<md-tab-label>
 					<md-icon md-svg-icon="tune.svg"></md-icon>
 				</md-tab-label>
