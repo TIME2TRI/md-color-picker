@@ -895,7 +895,7 @@ angular.module('mdColorPicker', [])
 					hasBackdrop: options.hasBackdrop,
 					clickOutsideToClose: options.clickOutsideToClose,
 
-					controller: ['$scope', 'options', '$rootScope', function ($scope, options, $rootScope) {
+					controller: ['$scope', 'options', function ($scope, options) {
 							//console.log( "DIALOG CONTROLLER OPEN", Date.now() - dateClick );
 							$scope.close = function close()
                             {
@@ -904,13 +904,10 @@ angular.module('mdColorPicker', [])
 							$scope.ok = function ok()
 							{
 								$scope.$emit('mdColorPicker:colorSetted', {
-									color: $scope.color
+									color: $scope.value
 								});
 								$scope.$broadcast('mdColorPicker:colorSetted', {
-									color: $scope.color
-								});
-								$rootScope.$broadcast('mdColorPicker:colorSetted', {
-									color: $scope.color
+									color: $scope.value
 								});
 
 								$mdDialog.hide( $scope.value );
