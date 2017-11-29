@@ -903,6 +903,16 @@ angular.module('mdColorPicker', [])
 							};
 							$scope.ok = function ok()
 							{
+								$scope.$emit('mdColorPicker:colorSetted', {
+									color: $scope.color
+								});
+								$scope.$broadcast('mdColorPicker:colorSetted', {
+									color: $scope.color
+								});
+								$rootScope.$broadcast('mdColorPicker:colorSetted', {
+									color: $scope.color
+								});
+								
 								$mdDialog.hide( $scope.value );
 							};
 							$scope.hide = $scope.ok;
